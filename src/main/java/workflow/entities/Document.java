@@ -1,13 +1,10 @@
 package workflow.entities;
 
-import com.sun.istack.internal.Nullable;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 public class Document {
@@ -42,7 +39,6 @@ public class Document {
     private Date createindDate;
 
     @Column
-    @Nullable
     private Date updateDate;
 
 
