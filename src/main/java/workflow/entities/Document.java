@@ -12,12 +12,11 @@ public class Document {
     public Document() {
     }
 
-    public Document(String link, Date createindDate, Date updateDate) {
+    public Document(String link, Date creatingDate, Date updateDate) {
         this.link = link;
-        this.createindDate = createindDate;
+        this.creatingDate = creatingDate;
         this.updateDate = updateDate;
     }
-
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "document", cascade = CascadeType.ALL)
     private List<DocumentKind> documentKinds;
@@ -36,7 +35,7 @@ public class Document {
 
     @Column
     @NotNull
-    private Date createindDate;
+    private Date creatingDate;
 
     @Column
     private Date updateDate;
@@ -58,12 +57,12 @@ public class Document {
         this.link = link;
     }
 
-    public Date getCreateindDate() {
-        return createindDate;
+    public Date getCreatingDate() {
+        return creatingDate;
     }
 
-    public void setCreateindDate(Date createindDate) {
-        this.createindDate = createindDate;
+    public void setCreatingDate(Date creatingDate) {
+        this.creatingDate = creatingDate;
     }
 
     public List<DocumentKind> getDocumentKinds() {

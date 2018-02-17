@@ -46,6 +46,15 @@ public class ClientTest {
     }
 
     @Test
+    public void testSetRole() {
+        Client client = new Client();
+        client.setRole("USER");
+        assertNotNull(client.getRole());
+        assertSame("USER", client.getRole());
+    }
+
+
+    @Test
     public void testSetUserDocuments() {
         Client client = new Client();
 
@@ -62,7 +71,7 @@ public class ClientTest {
     }
 
     @Test
-    public void testClient(){
+    public void testClient() {
         Client client = new Client("name", "email", "password");
         assertNotNull(client);
         assertSame("name", client.getName());
