@@ -23,4 +23,11 @@ public class ClientTest {
         assertSame(1L, client.getId());
     }
 
+    @Test
+    public void testSetName(){
+        Client client = new Client();
+        client.setName("Ivan");
+        assertNotNull(client.getName());
+        assertSame("Ivan", client.getName());
+    }
 }
