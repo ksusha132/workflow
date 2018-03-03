@@ -20,3 +20,6 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 }
+
+// TODO: 17.02.2018 create registration process
+// TODO: 17.02.2018 create authorization process
