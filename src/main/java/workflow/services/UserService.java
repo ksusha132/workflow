@@ -1,9 +1,10 @@
 package workflow.services;
 
 import workflow.dto.ClientDTO;
+import workflow.dto.ClientOutDTO;
 import workflow.dto.IdDTO;
 import workflow.entities.Client;
-import workflow.entities.Document;
+import workflow.entities.UserDocument;
 
 import java.util.List;
 
@@ -14,7 +15,11 @@ public interface UserService {
 
     Client update(ClientDTO clientDTO);
 
+    ClientOutDTO getUser(IdDTO idDTO);
+
+    List<Client> getAllUsers();
+
     void addDocument();
 
-    List<Document> getAllDocuments();
+    List<UserDocument> getAllDocuments(IdDTO idDTO);
 }
